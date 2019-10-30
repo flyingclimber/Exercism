@@ -9,31 +9,34 @@ NEPTUNE_ORBITAL = 164.79132
 DAILY_SECONDS = 24 * 60 * 60
 
 
+def format_seconds(seconds):
+    return round(seconds, 2)
+
+
 class SpaceAge(object):
     def __init__(self, seconds):
         self.seconds = seconds
 
     def on_earth(self):
-        return round(self.seconds / (EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_mercury(self):
-        return round(self.seconds / (MERCURY_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (MERCURY_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_venus(self):
-        return round(self.seconds / (VENUS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (VENUS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_mars(self):
-        return round(self.seconds / (MARS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (MARS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_jupiter(self):
-        return round(self.seconds / (JUPITER_ORBITAL * EARTH_ORBITAL* DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (JUPITER_ORBITAL * EARTH_ORBITAL* DAILY_SECONDS))
 
     def on_saturn(self):
-        return round(self.seconds / (SATURN_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (SATURN_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_uranus(self):
-        return round(self.seconds / (URANUS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
+        return format_seconds(self.seconds / (URANUS_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
 
     def on_neptune(self):
-        return round(self.seconds / (NEPTUNE_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS), 2)
-
+        return format_seconds(self.seconds / (NEPTUNE_ORBITAL * EARTH_ORBITAL * DAILY_SECONDS))
